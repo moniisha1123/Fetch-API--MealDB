@@ -1,19 +1,91 @@
-.background{
-    background-image: url("vegbackground.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    filter:blur(5px);
-   z-index: -1;
-    position: absolute;
-     top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-    
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #a8c66c;
 }
-body{
-    height:100%;
-    margin:0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 40%;
+    background-color: #ffcc33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-panel img {
+    width: 70%;
+    max-width: 300px;
+}
+
+.left-panel h2 {
+    margin-top: 20px;
+    color: #5a7d2c;
+    text-align: center;
+    font-weight: bold;
+}
+
+.left-panel span {
+    font-size: 2.5rem;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 60%;
+    background-color: #ffffff;
+    padding: 60px;
+    overflow-y: auto;
+}
+
+.right-panel h1 {
+    color: #5a7d2c;
+    margin-bottom: 30px;
+}
+
+.right-panel input {
+    width: 50%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.right-panel button {
+    width: 30%;
+  
+    background-color: #5a7d2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.right-panel button:hover {
+    background-color: #476321;
+}
+
+/* RESULTS */
+/* #mealResults {
+    margin-top: 30px;
+} */
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        height: auto;
+    }
 }
