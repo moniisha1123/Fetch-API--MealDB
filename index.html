@@ -2,36 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Meal Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Finder App</title>
 
-   
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <div class="background"></div>
-    <!-- Search Interface -->
-    <div class="container my-4">
-        <h1 class="text-center" style="color:rgb(20, 131, 42)">Meal Finder App</h1>
 
-        <!-- Search by Name -->
-        <div class="input-group my-3">
-            <input type="text" id="searchName" class="form-control" placeholder="Search meal by name">
-            <button style="background-color:rgb(2, 62, 3)" id="btnSearchName" class="btn btn-primary">Search</button>
-        </div>
+<div class="main-container">
 
-        <!-- Search by First Letter -->
-        <div class="input-group my-3">
-            <input type="text" id="searchLetter" class="form-control" maxlength="1" placeholder="Search by first letter">
-            <button   style="background-color:rgb(44, 70, 44)" id="btnSearchLetter" class="btn btn-secondary">Search</button>
-        </div>
-
-        <!-- Result Area -->
-        <div id="mealResults" class="row"></div>
+    <!-- LEFT SIDE (IMAGE / RECIPE BOOK) -->
+    <div class="left-panel">
+        <img src="recipe-book.jpg" alt="Recipe Book">
+        <h2>My Cooking<br><span>Recipe Book</span></h2>
     </div>
 
-    <script src="script.js"></script>
+    <!-- RIGHT SIDE (SEARCH) -->
+    <div class="right-panel">
+        <h1>Find Your Meal</h1>
+
+        
+    <!-- Name -->
+    <div class="input-group my-2">
+        <input type="text" id="searchName" class="form-control" placeholder="Search meal by name">
+        <button id="btnSearchName" class="btn btn-primary">Search</button>
+    </div>
+
+    <!-- Letter -->
+    <div class="input-group my">
+        <input type="text" id="searchLetter" class="form-control" maxlength="1" placeholder="Search by first letter">
+        <button id="btnSearchLetter" class="btn btn-secondary">Search</button>
+    </div>
+
+    <!-- Ingredient -->
+    <div class="input-group my-2">
+        <input type="text" id="searchIngredient" class="form-control" placeholder="Search by ingredient">
+        <button id="btnSearchIngredient" class="btn btn-warning text-white">Search</button>
+    </div>
+
+    <!-- Area -->
+    <div class="input-group my-2">
+        <input type="text" id="searchArea" class="form-control" placeholder="Search by area">
+        <button id="btnSearchArea" class="btn btn-info text-white">Search</button>
+    </div>
+
+    <!-- Combined -->
+    <div class="d-grid my-3">
+        <button id="btnSearchAll" class="btn btn-success">
+            Search Using Filled Fields
+        </button>
+    </div>
+
+        <div id="mealResults"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
